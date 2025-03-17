@@ -22,9 +22,13 @@
 	fbq('track', 'PageView');
 	</script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("DOMContentLoaded", function () {
     function isiPad() {
-        return /iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
+        return (
+            /iPad|Macintosh/.test(navigator.userAgent) && 
+            'ontouchend' in document && 
+            navigator.maxTouchPoints > 0
+        );
     }
     
     if (!isiPad()) {
@@ -40,6 +44,7 @@
         window.location.href = "https://www.google.com";
     }
 });
+	
 	</script>
 	<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=357399801355203&ev=PageView&noscript=1"></noscript>
