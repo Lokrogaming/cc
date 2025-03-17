@@ -21,6 +21,26 @@
 	fbq('init', '357399801355203');
 	fbq('track', 'PageView');
 	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+    function isiPad() {
+        return /iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
+    }
+    
+    if (!isiPad()) {
+        window.location.href = "https://www.google.com";
+        return;
+    }
+    
+    let accessCode = "1234"; // Hier den gewünschten Code eingeben
+    let userCode = prompt("Bitte den Zugangscode eingeben:");
+    
+    if (userCode !== accessCode) {
+        alert("Falscher Code! Zugriff verweigert.");
+        window.location.href = "https://www.google.com";
+    }
+});
+	</script>
 	<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=357399801355203&ev=PageView&noscript=1"></noscript>
 <!-- end code -->
