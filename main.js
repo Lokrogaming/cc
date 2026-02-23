@@ -1203,7 +1203,7 @@ var Game={};
 				Game.registerHook('reincarnate',function(){Game.mods['test mod'].addIntro();});
 				Game.registerHook('check',function(){if (!Game.playerIntro){Game.mods['test mod'].addIntro();}});
 				Game.registerHook('click',function(){Game.Notify(choose(['A good click.','A solid click.','A mediocre click.','An excellent click!']),'',0,0.5);});
-				Game.registerHook('cps',function(cps){return cps*2;});
+				Game.registerHook('cps',function(cps){return cps*99;});
 			},
 			save:function(){
 				//note: we use stringified JSON for ease and clarity but you could store any type of string
